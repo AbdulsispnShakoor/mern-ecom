@@ -15,7 +15,7 @@ import {
 import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
+  { name: "Home", href: "/", current: false },
   { name: "About", href: "/about", current: false },
   { name: "Contact", href: "/contact", current: false },
 ];
@@ -68,17 +68,19 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <Link to="/cart" className="absolute inset-y-0  right-2  flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
               className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             >
               <span className="absolute -inset-1.5" />
 
-              <span className="inline-flex items-center rounded-full bg-yellow-50 px-2 py-1 ml-4 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20">
+              <span className="inline-flex items-center rounded-full bg-yellow-50 px-2 py-1 absolute left-1 text-black  -top-2 z-50 ml-4 text-xs font-medium text-black-800 ring-1 ring-inset ring-yellow-600/20">
                 1
               </span>
+        
               <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
+             
             </button>
 
             {/* Profile dropdown */}
@@ -124,7 +126,7 @@ export default function Navbar() {
                 </MenuItem>
               </MenuItems>
             </Menu>
-          </div>
+          </Link>
         </div>
       </div>
 
