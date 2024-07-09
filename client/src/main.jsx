@@ -19,6 +19,7 @@ import Contact from "./pages/Contact.jsx";
 import Login from "./pages/Auth/Login.jsx";
 import Register from "./pages/Auth/Register.jsx";
 import Cart from "./store/features/cart/Cart.jsx";
+import Checkout from "./pages/Checkout/Checkout.jsx";
 
 // You can do this:
 const router = createBrowserRouter(
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/checkout" element={<Checkout />} />
       <Route path="*" element={<PageNotFound />} />
 
     </Route>
